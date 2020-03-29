@@ -4,24 +4,25 @@
 <head>
     <meta charset="UTF-8">
     <title>Контакты</title>
-</head>
+    <link rel="stylesheet" href="style.css"> </head>
 
 <body>
     <!-- <h1>Контакты</h1> -->
-    <ul>
+    <ul class="menu">
         <li><a href="index.html">Главная</a></li>
         <li><a href="catalog.html">Каталог</a></li>
         <li><a href="#">Контакты</a></li>
     </ul>
-    <hr>
-    <h1>Форма обратной связи</h1>
+    <h2>Форма обратной связи</h2>
+    <fieldset id="forma">
+    <legend>Ваши данные</legend>
     <form action=""> Имя
         <br>
-        <input type="text" placeholder="Ваше имя">
+        <input type="text" placeholder="Ваше имя" class="user"> <br>
         <br> Пол
         <br> М
         <input type="radio" name="pol" checked> Ж
-        <input type="radio" name="pol">
+        <input type="radio" name="pol"> <br>
         <br> Ваш вопрос связан с
         <ul>
             <li> Заказом картины
@@ -32,14 +33,14 @@
                 <input type="checkbox"> </li>
         </ul> Описание вопроса
         <br>
-        <textarea name="message" cols="30" rows="5"></textarea>
+        <textarea name="message" cols="30" rows="5" placeholder="Вопрос" class="user"></textarea> <br>
         <br> Контактный телефон
         <br>
-        <input type="text" placeholder="Телефон">
-        <br>
+        <input type="text" placeholder="Телефон" class="user">
+        <br> <br>
         <input type="submit" value="Отправить данные">
-        <input type="reset" value="Отмена"> </form>
-    <br>
+        
+        <input type="reset" value="Отмена"> </form> </fieldset>
     <h3>Наш адрес</h3>
     <ul>
         <li>Связаться с&nbsp;нами можно по&nbsp;номеру: +79196365291</li>

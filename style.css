@@ -1,0 +1,67 @@
+body {
+    background-color: #f8f8f8;
+}
+
+.menu {
+    text-align: center;
+    list-style-type: none;
+    padding: 0px;
+    background-color: PowderBlue;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: MediumAquamarine;
+    font: 1.2em Arial Black;
+    text-shadow: MidnightBlue 1.5px 1.5px 0, MidnightBlue -1.5px -1.5px 0, MidnightBlue -1.5px 1.5px 0, MidnightBlue 1.5px -1.5px 0;
+}
+
+.h3product {
+    color: black;
+    font-size: 18px;
+    font-weight: 400;
+    background-color: #eaeaea;
+}
+
+.short {
+    color: #707070;
+    font-size: 14px;
+    font-style: italic;
+    line-height: 16px;
+}
+
+.detailed {
+    color: #484343;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
+}
+
+.character {
+    list-style-image: url(img/tick.jpg);
+}
+
+.character li {
+    color: DarkBlue;
+    font: 1em Arial Black;
+}
+
+#forma {
+    background-color: PowderBlue;
+    width: 255px;
+    
+    border: 2px solid MidnightBlue;
+    font-weight: 600;
+}
+
+img[alt="Картинаа"] {
+    outline: 5px solid PowderBlue;
+}
+
+.user {
+    width: 250px;
+    height: 30px;
+    background-color: black;
+    color: white;
+}
