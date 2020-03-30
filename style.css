@@ -6,7 +6,6 @@ body {
     text-align: center;
     list-style-type: none;
     padding: 0px;
-    background-color: PowderBlue;
 }
 
 .menu li a {
@@ -14,6 +13,37 @@ body {
     color: MediumAquamarine;
     font: 1.2em Arial Black;
     text-shadow: MidnightBlue 1.5px 1.5px 0, MidnightBlue -1.5px -1.5px 0, MidnightBlue -1.5px 1.5px 0, MidnightBlue 1.5px -1.5px 0;
+}
+
+.menu li {
+    width: 317px;
+    height: 30px;
+    border: 1.1px solid Teal;
+}
+
+.menu li:first-child {
+    background-color: PowderBlue;
+}
+
+.menu li:nth-child(2) {
+    background-color: PowderBlue;
+}
+
+.menu li:last-child {
+    background-color: PowderBlue;
+}
+
+.menu li a:hover {
+    color: skyblue;
+}
+
+.menu li a:active {
+    color: white;
+}
+
+.menu li:hover::after {
+    content: " ►";
+    color: Teal;
 }
 
 .h3product {
@@ -50,7 +80,6 @@ body {
 #forma {
     background-color: PowderBlue;
     width: 255px;
-    
     border: 2px solid MidnightBlue;
     font-weight: 600;
 }
@@ -59,9 +88,117 @@ img[alt="Картинаа"] {
     outline: 5px solid PowderBlue;
 }
 
+img[alt="Картинаа"]:hover {
+    outline: none;
+}
+
 .user {
-    width: 250px;
+    width: 400px;
     height: 30px;
     background-color: black;
     color: white;
+}
+
+.user:focus {
+    background-color: DimGrey;
+}
+
+textarea,
+input {
+    text-transform: capitalize;
+}
+
+.list li:nth-child(2)::after {
+    content: " new";
+    color: blueviolet;
+    text-transform: uppercase;
+}
+
+.text:first-letter {
+    font-size: 23px;
+    color: blueviolet;
+}
+
+.table1 {
+    border: 1px solid blue;
+    width: 450px;
+    height: 180px;
+    border-collapse: collapse;
+}
+
+.table1 td {
+    border: 1px solid blue;
+    padding-left: 5px;
+    vertical-align: middle;
+}
+
+.table1-5 {
+    background-color: powderblue;
+}
+
+.header {
+    height: 50px;
+}
+
+.content {}
+
+.footer {
+    background-color: powderblue;
+    height: 40px;
+}
+
+.container {
+    width: 100%;
+    max-width: 1024px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+.logo {
+    float: left;
+}
+
+nav {
+    float: right;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+nav ul li {
+    display: inline-block;
+    /*один из способов разместить элементы в строку*/
+}
+
+#p1:first-letter {
+    font-size: 12px;
+    color: BlueViolet;
+}
+
+#p2:first-letter {
+    font-size: 35px;
+    color: MediumSpringGreen;
+}
+
+#p3:first-letter {
+    font-size: 20px;
+    color: YellowGreen;
+}
+
+#p4:first-letter {
+    font-size: 25px;
+    color: DarkTurquoise;
+}
+
+#p5:first-letter {
+    font-size: 17px;
+    color: MediumSlateBlue;
+}
+
+#p6:first-letter {
+    font-size: 29px;
+    color: Aquamarine;
 }
