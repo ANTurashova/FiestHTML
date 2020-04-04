@@ -2,75 +2,80 @@
 <html lang="rus">
 
 <head>
-    <meta charset="UTF-8">
-    <title>Контакты</title>
-    <link rel="stylesheet" href="style.css"> </head>
+  <meta charset="UTF-8">
+  <title>Контакты</title>
+  <link rel="stylesheet" href="style.css">
+</head>
 
 <body>
-    <!-- <h1>Контакты</h1> -->
+  <!-- <h1>Контакты</h1> -->
+  <div class="container">
+    <div class="fon"><img src="img/fon.jpg" alt="fon" width="1000px"> </div>
     <div class="header">
-        <div class="container">
-            <a href="#" class="logo"> <img src="img/logo.png" alt="logo" width="50px"> </a>
-            <nav>
-                <ul class="menu">
-                    <li><a href="index.html">Главная</a></li>
-                    <li><a href="catalog.html">Каталог</a></li>
-                    <li><a href="#">Контакты</a></li>
-                </ul>
-            </nav>
-        </div>
+      <div class="logo"><img src="img/logo.png" alt="logo" width="50px"> </div>
+      <div class="menu"><a class="menu_a" href="#">Контакты</a></div>
+      <div class="menu"><a class="menu_a" href="catalog.html">Каталог</a></div>
+      <div class="menu"><a class="menu_a" href="index.html">Главная</a></div>
     </div>
+
+
     <div class="content">
-        <div class="container">
-            <h2>Форма обратной связи</h2>
-            <fieldset id="forma">
-                <legend>Обратная связь</legend>
-                <form action=""> Имя
-                    <br>
-                    <input type="text" placeholder="Ваше имя" class="user">
-                    <br>
-                    <br>
-                    <fieldset>
-                        <legend>Пол</legend> Мужской
-                        <input type="radio" name="pol" checked> Женский
-                        <input type="radio" name="pol"> </fieldset>
-                    <br> Ваш вопрос связан с
-                    <ul>
-                        <li> Заказом картины
-                            <input type="checkbox"> </li>
-                        <li>Проблемой работы сайта
-                            <input type="checkbox"> </li>
-                        <li>Другое
-                            <input type="checkbox"> </li>
-                    </ul> Описание вопроса
-                    <br>
-                    <textarea name="message" cols="30" rows="5" placeholder="Вопрос" class="user"></textarea>
-                    <br>
-                    <br> Контактный телефон
-                    <br>
-                    <input type="text" placeholder="Телефон" class="user">
-                    <br>
-                    <br> Email
-                    <br>
-                    <input type="text" placeholder="qwerty@gmil.com" class="user">
-                    <br>
-                    <br>
-                    <input type="submit" value="Отправить данные">
-                    <input type="reset" value="Отмена"> </form>
-            </fieldset>
-            <h3>Наш адрес</h3>
-            <ul>
-                <li>Связаться с&nbsp;нами можно по&nbsp;номеру: +79196365291</li>
-                <li>E-mail: kartinyshka@kart.com</li>
-                <li> Адрес: Россия, респ. Татарстан, г. Казань, ул. Петербургская, 1, ТРК &laquo;Кольцо&raquo;</li>
-            </ul>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3149.8335254009125!2d49.12271526577542!3d55.78614794178277!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x415ead0fdc0077f7%3A0x60110ec21cced7cd!2z0KLQoNCaICLQmtC-0LvRjNGG0L4i!5e0!3m2!1sru!2sru!4v1585487676110!5m2!1sru!2sru" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-        </div>
+      <br>
+      <fieldset id="forma">
+        <legend>Обратная связь</legend>
+        <form action=""> Имя
+          <br>
+          <input type="text" placeholder="Ваше имя" class="contacts_user contacts_name">
+          <br>
+          <br>
+          <fieldset>
+            <legend>Пол</legend> Мужской
+            <input type="radio" name="pol" checked> Женский
+            <input type="radio" name="pol">
+          </fieldset>
+          <br> Ваш вопрос связан с
+          <ul>
+            <li> Заказом картины
+              <input type="checkbox"> </li>
+            <li>Проблемой работы сайта
+              <input type="checkbox"> </li>
+            <li>Другое
+              <input type="checkbox"> </li>
+            <br>
+          </ul> Описание вопроса
+          <br>
+          <textarea name="message" cols="30" rows="5" placeholder="Вопрос" class="contacts_user"></textarea>
+          <br>
+          <br> Контактный телефон
+          <br>
+          <input type="text" placeholder="Телефон" class="contacts_user">
+          <br>
+          <br> Email
+          <br>
+          <input type="text" placeholder="qwerty@gmail.com" class="contacts_user">
+          <br>
+          <br>
+          <input type="submit" value="Отправить данные">
+          <input type="reset" value="Отмена">
+        </form>
+      </fieldset>
+      <h3>Наш адрес</h3>
+      <ul>
+        <li>Связаться с&nbsp;нами можно по&nbsp;номеру: +79196365291</li>
+        <li>E-mail: kartinyshka@kart.com</li>
+        <li> Адрес: Россия, респ. Татарстан, г. Казань, ул. Петербургская, 1, ТРК &laquo;Кольцо&raquo;</li>
+      </ul>
+      <br>
+      <iframe class="contacts_map"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3149.8335254009125!2d49.12271526577542!3d55.78614794178277!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x415ead0fdc0077f7%3A0x60110ec21cced7cd!2z0KLQoNCaICLQmtC-0LvRjNGG0L4i!5e0!3m2!1sru!2sru!4v1585487676110!5m2!1sru!2sru"
+        width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
     </div>
+
     <div class="footer">
-        <div class="container">
-            <hr> Все права защищены &copy;&nbsp;2020 <a href="https://vk.com/fasschool" target="_blank">FAS</a> </div>
+
+      <hr> Все права защищены &copy;&nbsp;2020 <a href="https://vk.com/fasschool" target="_blank">FAS</a>
     </div>
+  </div>
 </body>
 
 </html>

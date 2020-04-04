@@ -1,204 +1,207 @@
-body {
-    background-color: #f8f8f8;
+/*Главная*/
+.container {
+  width: 1000px;
+  margin: 0 auto;
 }
 
-.menu {
-    text-align: center;
-    list-style-type: none;
-    padding: 0px;
-}
-
-.menu li a {
-    text-decoration: none;
-    color: MediumAquamarine;
-    font: 1.2em Arial Black;
-    text-shadow: MidnightBlue 1.5px 1.5px 0, MidnightBlue -1.5px -1.5px 0, MidnightBlue -1.5px 1.5px 0, MidnightBlue 1.5px -1.5px 0;
-}
-
-.menu li {
-    width: 317px;
-    height: 30px;
-    border: 1.1px solid Teal;
-}
-
-.menu li:first-child {
-    background-color: PowderBlue;
-}
-
-.menu li:nth-child(2) {
-    background-color: PowderBlue;
-}
-
-.menu li:last-child {
-    background-color: PowderBlue;
-}
-
-.menu li a:hover {
-    color: skyblue;
-}
-
-.menu li a:active {
-    color: white;
-}
-
-.menu li:hover::after {
-    content: " ►";
-    color: Teal;
-}
-
-.h3product {
-    color: black;
-    font-size: 18px;
-    font-weight: 400;
-    background-color: #eaeaea;
-}
-
-.short {
-    color: #707070;
-    font-size: 14px;
-    font-style: italic;
-    line-height: 16px;
-}
-
-.detailed {
-    color: #484343;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 24px;
-    text-align: left;
-}
-
-.character {
-    list-style-image: url(img/tick.jpg);
-}
-
-.character li {
-    color: DarkBlue;
-    font: 1em Arial Black;
-}
-
-#forma {
-    background-color: PowderBlue;
-    width: 255px;
-    border: 2px solid MidnightBlue;
-    font-weight: 600;
-}
-
-img[alt="Картинаа"] {
-    outline: 5px solid PowderBlue;
-}
-
-img[alt="Картинаа"]:hover {
-    outline: none;
-}
-
-.user {
-    width: 400px;
-    height: 30px;
-    background-color: black;
-    color: white;
-}
-
-.user:focus {
-    background-color: DimGrey;
-}
-
-textarea,
-input {
-    text-transform: capitalize;
-}
-
-.list li:nth-child(2)::after {
-    content: " new";
-    color: blueviolet;
-    text-transform: uppercase;
-}
-
-.text:first-letter {
-    font-size: 23px;
-    color: blueviolet;
-}
-
-.table1 {
-    border: 1px solid blue;
-    width: 450px;
-    height: 180px;
-    border-collapse: collapse;
-}
-
-.table1 td {
-    border: 1px solid blue;
-    padding-left: 5px;
-    vertical-align: middle;
-}
-
-.table1-5 {
-    background-color: powderblue;
+.fon {
+  position: absolute;
+  z-index: -1;
 }
 
 .header {
-    height: 50px;
-}
-
-.content {}
-
-.footer {
-    background-color: powderblue;
-    height: 40px;
-}
-
-.container {
-    width: 100%;
-    max-width: 1024px;
-    padding: 0 15px;
-    margin: 0 auto;
+  height: 70px;
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  box-sizing: border-box;
 }
 
 .logo {
-    float: left;
+  width: 50px;
+  height: 50px;
+  background: darkred;
+  float: left;
 }
 
-nav {
-    float: right;
+.menu {
+  float: right;
+  background-color: #A9E2F3;
+  width: 300px;
+  height: 30px;
+  border: 1.1px solid #6A0888;
+  text-align: center;
 }
 
-nav ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
+.menu_a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  color: #6A0888;
+  font: 1.4em Arial Black;
+  font-weight: 600;
+  line-height: 1.3em;
 }
 
-nav ul li {
-    display: inline-block;
-    /*один из способов разместить элементы в строку*/
+.menu_a:hover {
+  color: #0489B1;
 }
 
-#p1:first-letter {
-    font-size: 12px;
-    color: BlueViolet;
+.menu_a:hover::after {
+  content: " ►";
+  color: #0489B1;
 }
 
-#p2:first-letter {
-    font-size: 35px;
-    color: MediumSpringGreen;
+.menu_a:active {
+  color: white;
 }
 
-#p3:first-letter {
-    font-size: 20px;
-    color: YellowGreen;
+.content {
+  overflow: hidden;
+  background-color: #E0F8F1;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
-#p4:first-letter {
-    font-size: 25px;
-    color: DarkTurquoise;
+p:first-letter {
+  font-size: 20px;
+  color: #6A0888;
 }
 
-#p5:first-letter {
-    font-size: 17px;
-    color: MediumSlateBlue;
+.footer {
+  background-color: #E0F8F1;
+  height: 40px;
+  text-align: right;
+  padding-left: 10px;
+  padding-right: 10px;
+  line-height: 1.5em;
 }
 
-#p6:first-letter {
-    font-size: 29px;
-    color: Aquamarine;
+/*Каталог*/
+.catalog_box {
+  width: 290px;
+  height: 210px;
+  float: left;
+  margin-left: 25px;
+  margin-top: 25px;
+  text-align: center;
+  /*outline: 1px solid #000;*/
+}
+
+.catalog_image:hover {
+    box-shadow: 0 0 10px #000;
+}
+
+/*Страница товара*/
+.product_box {
+  width: 980px;
+  height: 195px;
+}
+
+.product_foto {
+  width: 300px;
+  height: 185px;
+  float: left;
+  margin-right: 20px;
+  clear: both;
+}
+
+.product_buy {
+  width: 150px;
+  height: 30px;
+  float: left;
+  background-color: #A9E2F3;
+  border: 1.1px solid #6A0888;
+  text-align: center;
+}
+
+img[alt="product_img"] {
+  outline: 7px solid #A9E2F3;
+}
+
+img[alt="product_img"]:hover {
+  outline: none;
+}
+
+.product_h3 {
+  color: black;
+  padding-left: 10px;
+  font-weight: 600;
+  background-color: #A9E2F3;
+}
+
+.product_p {
+  color: #484343;
+}
+
+.product_charact {
+  list-style-image: url(img/tick.jpg);
+}
+
+.product_table1 {
+  border: 1px solid blue;
+  width: 450px;
+  height: 180px;
+  border-collapse: collapse;
+}
+
+.product_table1 td {
+  border: 1px solid blue;
+  padding-left: 5px;
+  vertical-align: middle;
+}
+
+/*Контакты*/
+#forma {
+  background-color: PowderBlue;
+  width: 255px;
+  border: 2px solid MidnightBlue;
+  font-weight: 600;
+}
+
+.contacts_user {
+  width: 400px;
+  height: 30px;
+  background-color: white;
+  color: black;
+}
+
+.contacts_user:focus {
+  background-color: #ECE0F8;
+}
+
+.contacts_name {
+  text-transform: capitalize;
+}
+
+.contacts_map {
+  width: 980px;
+  height: 374px;
+}
+
+/*Исправление системного гадства*/
+dir {
+  padding-inline-start: 0px;
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+}
+
+h2 {
+  margin-block-end: 0.2em;
+}
+
+h3 {
+  margin-block-end: 0.2em;
+}
+
+p {
+  margin-block-start: 0.5em;
+  margin-block-end: 0.5em;
+}
+
+ul {
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+    padding-inline-start: 20px;
 }
