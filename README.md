@@ -1,2 +1,2 @@
-# FiestHTML
- Изучение HTML и CSS и создание сайта с магазином.
+# Site_with_site_templates
+ Сайт с шаблонами сайтов.
