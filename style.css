@@ -42,14 +42,6 @@
   float: right;
 }
 
-.box1 {
-  height: 341px;
-}
-
-.box2 {
-  height: 283px;
-}
-
 h2 {}
 
 p {}
@@ -66,4 +58,17 @@ p {}
   text-align: center;
   line-height: 30px;
   display: inline-block;
+}
+
+/*персональные стили*/
+#box1 {
+  height: 341px;
+}
+
+#box2 {
+  height: 283px;
+}
+
+#box3 {
+  height: 341px;
 }
