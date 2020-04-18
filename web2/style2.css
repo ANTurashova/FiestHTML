@@ -578,7 +578,7 @@ body {
   float: left;
   width: 221px;
   height: 102px;
-  
+
   margin-left: 28px;
 }
 
@@ -618,6 +618,7 @@ body {
 .trending {
   /*height: 1108px;*/
   margin-top: 119px;
+  margin-bottom: 50px;
 }
 
 .trending-header {
