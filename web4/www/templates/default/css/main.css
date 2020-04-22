@@ -1,0 +1,45 @@
+body{
+    padding: 0;
+    display: block;
+}
+
+.hideme{
+    display: none;
+}
+
+#header{
+    height: 70px;
+    text-align: center;
+    background-color: #a3ffeb;
+}
+
+#leftColumn{
+    width: 200px;
+    float: left;
+}
+
+#leftMenu, #loginBox, #registerBox{
+    padding-bottom: 20px;
+    background-color: #77ff98;
+}
+
+#centerColumn{
+    width: 600px;
+    float: left;
+    padding-left: 90px;
+    background-color: #e5ffff;
+}
+
+#footer{
+    clear: both;
+    background-color: indigo;
+}
+
+.menuCaption{
+    padding: 3px;
+    font-weight: bold;
+}
+
+.cartBox{
+    padding: 5px 0px 5px 0px;
+}

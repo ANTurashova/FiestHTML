@@ -16,6 +16,7 @@
 
 .boxA {
   width: 1000px;
+  padding-bottom: 15px;
 }
 
 .boxA-img {
@@ -30,6 +31,7 @@
 
 .boxB {
   width: 1000px;
+  padding-bottom: 15px;
 }
 
 .boxB-img {
@@ -58,17 +60,4 @@ p {}
   text-align: center;
   line-height: 30px;
   display: inline-block;
-}
-
-/*персональные стили*/
-#box1 {
-  height: 341px;
-}
-
-#box2 {
-  height: 283px;
-}
-
-#box3 {
-  height: 341px;
 }
