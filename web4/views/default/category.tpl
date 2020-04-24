@@ -1,7 +1,8 @@
-{* Шаблон главной таблицы *}
-<br>
+{* Страница категории *}
+<h1>Товары категории {$rsCategory.name}</h1>
+
 {foreach $rsProducts as $item name = products}
-    <div style="float: left; padding: 0px 30px 40px 0px;">
+    <div style="float:left; padding: 0px 30px 40px 0px">
         <a href="../www/?controller=product&id={$item.id}">
             <img src="../www/images/products/{$item.image}" alt="{$item.image}" >
         </a>
@@ -14,4 +15,6 @@
     {/if}
 {/foreach}
 
-{* {$item['image']} *}
+{foreach $rsChildCats as $item name = childCats}
+    <h2><a href="../www/?controller=category&id={$item.id}">{$item.name}</a></h2>
+{/foreach}

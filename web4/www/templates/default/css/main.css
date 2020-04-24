@@ -1,3 +1,7 @@
+.container {
+    width: 1200px;
+    margin: 0 auto;
+}
 body{
     padding: 0;
     display: block;
@@ -8,7 +12,7 @@ body{
 }
 
 #header{
-    height: 70px;
+    height: 60px;
     text-align: center;
     background-color: #a3ffeb;
 }
@@ -24,7 +28,7 @@ body{
 }
 
 #centerColumn{
-    width: 600px;
+    width: 910px;
     float: left;
     padding-left: 90px;
     background-color: #e5ffff;
@@ -43,3 +47,4 @@ body{
 .cartBox{
     padding: 5px 0px 5px 0px;
 }
+

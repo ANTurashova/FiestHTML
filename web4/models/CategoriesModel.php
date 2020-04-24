@@ -13,8 +13,10 @@
  * @return array массив дочерних категорий
  */
 function getChildrenForCat($catId){
+    //В IndexController.php прописать include_once '../models/CategoriesModel.php';
     global $db;
-    $sql = "SELECT * FROM categories WHERE parent_id = '$catId' ";
+    $catId = intval($catId); //преобразование в тип integer //для защиты от SQL-инъекций
+    $sql = "SELECT * FROM categories WHERE parent_id = '{$catId}'";
     $rs = mysqli_query($db,$sql);
     return createSmartyRsArray($rs);
 }
@@ -41,4 +43,19 @@ function getAllMainCatsWithChildren(){
     }
 
     return $smartyRs;
+}
+
+
+/**
+ * Получить данные категории по id
+ *
+ * @param integer $catId ID категории
+ * @return array массив - строка категорий
+ */
+function getCatById($catId){
+    global $db;
+    $catId = intval($catId); //преобразование в тип integer //для защиты от SQL-инъекций
+    $sql = "SELECT * FROM categories WHERE id = '{$catId}'";  //взяли в кавычки для того, чтобы обезопасить запрос
+    $rs = mysqli_query($db,$sql); //получаем данным из БД
+    return mysqli_fetch_assoc($rs); //преобразовываем данные в ассоциативный массив и возвращаем их
 }
