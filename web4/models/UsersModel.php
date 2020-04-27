@@ -17,17 +17,13 @@
  */
 function registerNewUser($email, $pwdMD5, $name, $phone, $address)
 {
-    $email =  htmlspecialchars(mysqli_real_escape_string($email)); //mysqli_real_escape_string экранирует специальные символы в строках
-    $name =   htmlspecialchars(mysqli_real_escape_string($name));  //htmlspecialchars преобразует специальные символы в HTML сущности
-    $phone =  htmlspecialchars(mysqli_real_escape_string($phone));
-    $address = htmlspecialchars(mysqli_real_escape_string($address));
-
-    $sql = "INSERT INTO users (`email`, `pwd`, `name`, `phone`, `address`) VALUES ('($email)', '($pwdMD5)', '($name)', '($address)')"; //вставка в таблицу
-    $rs = mysqli_query($sql);
+    global $db;
+    $sql = "INSERT INTO users (`email`, `pwd`, `name`, `phone`, `address`) VALUES ('$email', '$pwdMD5', '$name', '$phone', '$address')"; //вставка в таблицу
+    $rs = mysqli_query($db,$sql);
 
     if($rs) {
-        $sql = "SELECT * FROM users WHERE (`email` = '($email)' and `pwd` = '($pwdMD5)') LIMIT 1"; //выбираем 1 учётную запись
-        $rs = mysqli_query($sql);
+        $sql = "SELECT * FROM users WHERE (`email` = '$email' and `pwd` = '$pwdMD5') LIMIT 1"; //выбираем 1 учётную запись
+        $rs = mysqli_query($db,$sql);
         $rs = createSmartyRsArray($rs);
 
         if(isset($rs[0])){
@@ -44,6 +40,7 @@ function registerNewUser($email, $pwdMD5, $name, $phone, $address)
 
 /**
  * Проверка параметров для регистрации пользователя
+ *
  * @param $email
  * @param $pwd1
  * @param $pwd2
@@ -70,7 +67,7 @@ function checkRegisterParams($email, $pwd1, $pwd2)
 
     if($pwd1 != $pwd2){
         $res['success'] = false;
-        $res['message'] = 'Пароль не совпадают';
+        $res['message'] = 'Пароли не совпадают';
     }
 
     return $res;
@@ -85,10 +82,10 @@ function checkRegisterParams($email, $pwd1, $pwd2)
  */
 function checkUserEmail($email)
 {
-    $email = mysqli_real_escape_string($email);
+    global $db;
     $sql = "SELECT id FROM users WHERE email = '{$email}'";
 
-    $rs = mysqli_query($sql);
+    $rs = mysqli_query($db,$sql);
     $rs = createSmartyRsArray($rs);
 
     return $rs;

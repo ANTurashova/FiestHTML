@@ -17,7 +17,7 @@ include_once '../models/UsersModel.php';
  *
  * @return json массив данных пользователя
  */
-function registersAction(){
+function registerAction(){
     $email = isset($_REQUEST['email']) ? $_REQUEST['email'] : null; //если пришла берём значение, в противном случаем берём null
     $email = trim($email);
 
@@ -58,4 +58,3 @@ function registersAction(){
     }
     echo json_encode($resData);
 }
-

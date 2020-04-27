@@ -32,7 +32,7 @@
         </div>
     </div>
 
-
+    <hr>
 
     <div class="menuCaption">Корзина</div>
     <a href="../www/?controller=cart" title="Перейти в корзину">В корзине</a>              {*!!!!!!!!!!!!!!адрес корзины /cart/*}

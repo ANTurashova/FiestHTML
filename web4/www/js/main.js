@@ -61,3 +61,58 @@ function conversionPrice(itemId) {
 
     $('#itemRealPrice_' + itemId).html(itemRealPrice); //заменить в с тегом itemRealPrice_itemIds
 }
+
+
+/**
+ * Получение данных с формы
+ *
+ */
+function getData(obj_form) {
+    var hData = {};
+    $('input, textarea, select', obj_form).each(function () {
+        if(this.name) {
+            hData[this.name] = this.value;
+console.log('hData[' + this.name + '] = ' + hData[this.name]);
+        }
+    });
+    return hData;
+}
+
+
+/**
+ * Регистрация нового пользователя
+ *
+ */
+function registerNewUser() {
+    var postData = getData('#registerBox'); //gatData будет собирать в json массив все нужные значния, которые содержатся в id #registerBox
+
+    $.ajax({
+        type: 'POST',
+        async: false,
+        url: "../www/?controller=user&action=register",                                                             // "/user/register/"
+        data: postData,
+        dataType: 'json',
+        success: function(data){
+            if(data['success']) {
+              //  console.log("Прибыли данные: " + data);
+                alert('Регистрация прошла успешно');
+
+                //> блок в левом столбце
+                $('#registerBox').hide();
+
+//                $('#userLink').attr('href', '../www/?controller=user');                                                 //"/user/"
+//                $('#userLink').html(data['userName']);
+//                $('#userBox').show();
+                //<
+
+                //> страница заказа
+//                $('#loginBox').hide();
+//                $('#btnSaveOrder').show();
+                //<
+            } else {
+             //   console.log("Прибыли данные: " + data);
+                alert(data['message']);
+            }
+        }
+    });
+}

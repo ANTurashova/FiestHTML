@@ -4,3 +4,5 @@ composer.lock
 vendor
 tmp
 docker/data/mysql
+web4/tmp
+web4/ад.txt

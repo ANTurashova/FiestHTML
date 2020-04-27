@@ -7,6 +7,7 @@
 // Подключаем модели
 include_once '../models/CategoriesModel.php';
 include_once '../models/ProductsModel.php';
+include_once '../models/UsersModel.php';
 
 /**
  * Формирование главной страницы сайта
