@@ -100,9 +100,9 @@ function registerNewUser() {
                 //> блок в левом столбце
                 $('#registerBox').hide();
 
-//                $('#userLink').attr('href', '../www/?controller=user');                                                 //"/user/"
-//                $('#userLink').html(data['userName']);
-//                $('#userBox').show();
+                $('#userLink').attr('href', '../www/?controller=user');                                                 //"/user/"
+                $('#userLink').html(data['userName']);
+                $('#userBox').show();
                 //<
 
                 //> страница заказа
@@ -111,6 +111,39 @@ function registerNewUser() {
                 //<
             } else {
              //   console.log("Прибыли данные: " + data);
+                alert(data['message']);
+            }
+        }
+    });
+}
+
+/**
+ * Авторизация пользователя
+ *
+ */
+function login() {
+    var email = $('#loginEmail').val();
+    var pwd = $('#loginPwd').val();
+
+    var postData = getData('#loginBox');
+
+    $.ajax({
+        type: 'POST',
+        async: false,
+        url: "../www/?controller=user&action=login",
+        data: postData,
+        dataType: 'json',
+        success: function(data){
+            if(data['success']) {
+
+                //> блок в левом столбце
+                $('#registerBox').hide();
+                $('#loginBox').hide();
+
+                $('#userLink').attr('href', '../www/?controller=user');
+                $('#userLink').html(data['displayName']);
+                $('#userBox').show();
+            } else {
                 alert(data['message']);
             }
         }

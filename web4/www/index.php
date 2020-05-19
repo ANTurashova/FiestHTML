@@ -16,6 +16,12 @@ $controllerName = isset($_GET['controller']) ? ucfirst($_GET['controller']) : 'I
 // определяем с какой функцией будем рабоать
 $actionName = isset($_GET['action']) ? $_GET['action'] : 'index';
 
+// если в сессии есть данные об авторизированном пользователь, то передаем их в шаблон
+if(isset($_SESSION['user'])){
+    $smarty->assign('arUser', $_SESSION['user']);
+}
+
+// инициализируем переменную шаблонизатора количества элементов в корзиие
 $smarty->assign('cartCntItems', count($_SESSION['cart']));
 
 loadPage($smarty, $controllerName, $actionName); //создаём страницу

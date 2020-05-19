@@ -58,3 +58,65 @@ function registerAction(){
     }
     echo json_encode($resData);
 }
+
+/**
+ *  Разлогинивание пользователя
+ *
+ */
+function logoutAction(){
+    if(isset($_SESSION['user'])){
+        unset($_SESSION['user']);
+        unset($_SESSION['cart']);
+    }
+    redirect('../www/');
+}
+
+/**
+ * AJAX авторизацмя пользователя
+ *
+ * @return json массив данных залогиненого пользователя
+ */
+function loginAction(){
+    $email = isset($_REQUEST['email']) ? $_REQUEST['email'] : null;
+    $email = trim($email); /*удаляет пробелы с боков*/
+    $pwd = isset($_REQUEST['pwd']) ? $_REQUEST['pwd'] : null;
+    $pwd = trim($pwd);
+
+    $userData = loginUser($email, $pwd);
+
+    if($userData['success']){
+        $userData = $userData[0];
+
+        $_SESSION['user'] = $userData; /*$userData из модели пришло*/
+        $_SESSION['user']['displayName'] = $userData['name'] ? $userData['name'] : $userData['email'];
+
+        $resData = $_SESSION['user'];
+        $resData['success'] = 1;
+    } else {
+        $resData['success'] = 0;
+        $resData['message'] = 'Неверный логин или пароль';
+    }
+    echo json_encode($resData);
+}
+
+/**
+ * Формирование главной страницы пользователя
+ *
+ * @param object $smarty шаблонизатор
+ */
+function indexAction($smarty) {
+    // если пользователь не залогинен, то редирект на главную страницу
+    if(! isset($_SESSION['user'])){
+        redirect('../www/');
+    }
+
+    // получаем список категорий для меню
+    $rsCategories = getAllMainCatsWithChildren();
+
+    $smarty->assign('pageTitle', 'Страница пользователя');
+    $smarty->assign('rsCategories', $rsCategories);
+
+    loadTemplate($smarty, 'header');
+    loadTemplate($smarty, 'user');
+    loadTemplate($smarty, 'footer');
+}

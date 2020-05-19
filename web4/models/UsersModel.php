@@ -5,6 +5,7 @@
  *
  */
 
+
 /**
  *  Регистрация нового пользователя
  *
@@ -83,10 +84,35 @@ function checkRegisterParams($email, $pwd1, $pwd2)
 function checkUserEmail($email)
 {
     global $db;
-    $sql = "SELECT id FROM users WHERE email = '{$email}'";
+    $sql = "SELECT id FROM users WHERE `email` = '{$email}'";
 
     $rs = mysqli_query($db,$sql);
     $rs = createSmartyRsArray($rs);
+
+    return $rs;
+}
+
+/**
+ * Авторизация пользователя
+ *
+ * @param string $email почта (логин)
+ * @param string $pwd пароль
+ * @return array массив данных пользователя
+ */
+function loginUser($email, $pwd)
+{
+    $pwd = md5($pwd);
+
+    global $db;
+    $sql = "SELECT * FROM users WHERE (`email` = '$email' and `pwd` = '$pwd') LIMIT 1";
+    $rs = mysqli_query($db, $sql);
+    $rs = createSmartyRsArray($rs);
+
+    if(isset($rs[0])){
+        $rs['success'] = 1;
+    } else {
+        $rs['success'] = 0;
+    }
 
     return $rs;
 }
